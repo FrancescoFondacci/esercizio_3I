@@ -1,0 +1,18 @@
+.principale{
+	-fx-hgap:10;
+	-fx-vgap:10;
+	-fx-padding:10;
+	-fx-border-color:blue;
+	-fx-background-color:lightblue;
+}
+.label{
+	-fx-font-size:20;
+}
+.button{
+	-fx-background-color:blue;
+	-fx-text-fill:white;
+	-fx-max-width:1000;
+}
+.text-field{
+	-fx-text-fill:blue;
+}

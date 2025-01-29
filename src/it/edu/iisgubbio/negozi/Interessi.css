@@ -1,0 +1,22 @@
+.principale{
+	-fx-hgap:10;
+	-fx-vgap:10;
+	-fx-padding:10;
+	-fx-border-color:green;
+	-fx-background-color:#ffffff;
+}
+.text-field{
+	-fx-text-fill:#008040;
+	-fx-background-color:lightgreen;
+}
+.label{
+	-fx-text-fill:green;
+	-fx-font-family:Times New Roman;
+}
+.risultato{
+	-fx-font-size:20;
+}
+.button{
+	-fx-background-color:lightgreen;
+	-fx-text-fill:#008040;
+}

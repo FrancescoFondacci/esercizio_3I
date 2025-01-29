@@ -1,0 +1,21 @@
+.text-field{
+	-fx-background-color:yellow;
+}
+.label{
+	-fx-text-fill:blue;
+}
+.risultato{
+	-fx-text-fill:red;
+}
+.risultato1{
+	-fx-font-size:20;
+}
+.principale{
+	-fx-background-color:pink;
+	-fx-hgap:10;
+	-fx-vgap:10;
+	-fx-padding:10;
+}
+.button{
+	-fx-background-color:rgb(0, 64, 0);
+}

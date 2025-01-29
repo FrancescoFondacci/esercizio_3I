@@ -1,0 +1,11 @@
+.principale{
+	-fx-hgap:10;
+	-fx-vgap:10;
+	-fx-padding:10;
+}
+.presente{
+	-fx-text-fill:green;
+}
+.non_presente{
+	-fx-text-fill:red;
+}

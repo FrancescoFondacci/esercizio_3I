@@ -1,0 +1,7 @@
+.punteggio{
+	-fx-font-size:40;
+	-fx-fill:white;
+}
+.sfondo{
+	-fx-background-image:url("sfondo.jpg");
+}
