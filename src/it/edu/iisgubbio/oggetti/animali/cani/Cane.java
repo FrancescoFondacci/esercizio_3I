@@ -24,7 +24,11 @@ public class Cane {
 		return "nome "+nomeCane+" razza "+razza+" anno "+anno;
 	}
 	
-	//metodo verifica proprietario, dato un nome proprietatario si/no
+	/** 
+	 * metodo verifica proprietario, dato un nome proprietatario si/no
+	 * @param nome nome del propietario da controllare
+	 * @return true se il nome inserito è quello del propietario - false se non lo è
+	 */
 	public boolean verificaProprietario(String nome) {
 		if (this.nomePropietario.equals(nome)) {
 			return true;
@@ -34,7 +38,11 @@ public class Cane {
 		//return this.nomePropietario.equals(nome); scritto in una riga
 	}
 
-	//class cane metodo età dato un anno restituisce età cane
+	/**
+	 * metodo età dato un anno restituisce età cane
+	 * @param anno anno corrente
+	 * @return calcola l'età del cane nell'anno specificato
+	 */
 	public int età(int anno) {
 		return anno-this.anno;
 	}

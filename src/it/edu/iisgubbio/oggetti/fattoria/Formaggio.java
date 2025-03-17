@@ -17,8 +17,16 @@ public class Formaggio extends Prodotto {
 		super(nome, prezzoAlChilo);
 		this.tempoStagionatura = tempoStagionatura;
 		this.dop=false;
+	}	
+
+	public void setTempoStagionatura(int tempoStagionatura) {
+		this.tempoStagionatura = tempoStagionatura;
 	}
-	
+
+	public void setDop(boolean dop) {
+		this.dop = dop;
+	}
+
 	public String toString() {
 		if(dop==true) {
 			if(tempoStagionatura>0) {

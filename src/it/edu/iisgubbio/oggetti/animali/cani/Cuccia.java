@@ -40,14 +40,14 @@ public class Cuccia {
 			if(colore==null) {
 				return "numero posti "+ posti +" prezzo "+ prezzo+" è per interno";
 			}else {
-				return "numero posti "+ posti +" prezzo "+ prezzo+" è per interno" +"colore "+colore;
+				return "numero posti "+ posti +" prezzo "+ prezzo+" è per interno" +" colore "+colore;
 			}
 			
 		}else {
 			if(colore==null) {
 				return "numero posti "+ posti +" prezzo "+ prezzo +" è per esterno";
 			}else {
-				return "numero posti "+ posti +" prezzo "+ prezzo +" è per esterno "+"colore "+colore;
+				return "numero posti "+ posti +" prezzo "+ prezzo +" è per esterno "+" colore "+colore;
 			}
 		}
 		

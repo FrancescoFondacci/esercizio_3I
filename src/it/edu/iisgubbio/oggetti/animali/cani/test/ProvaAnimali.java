@@ -19,6 +19,14 @@ public class ProvaAnimali {
 		System.out.println(fido.toString());
 		System.out.println(wisky.toString());
 		System.out.println(cuccia.toString());
+		System.out.println(fido.età(2025));
+		//verifica se il propietario  è Pluto - restituisci stringa
+		if (fido.verificaProprietario("Pluto")) {
+			System.out.println("è il propietario");
+		}else {
+			System.out.println("non è il propietario");
+		}
+		
  
 	}
 

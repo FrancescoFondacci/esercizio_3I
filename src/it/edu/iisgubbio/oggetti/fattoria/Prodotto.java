@@ -16,7 +16,7 @@ public class Prodotto {
 
 	@Override
 	public String toString() {
-		return "Prodotto"+ nome+ "costo al chilo "+ prezzoAlChilo+"€";
+		return "Prodotto "+ nome+ " costo al chilo "+ prezzoAlChilo+"€";
 	}
 	
 	public double calcolaPrezzo(double peso) {
