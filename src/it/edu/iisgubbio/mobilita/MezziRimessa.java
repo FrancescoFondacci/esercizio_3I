@@ -35,12 +35,12 @@ public class MezziRimessa {
 		
 		AMotore veicolo=new AMotore("elicottero",50000,210,"gasolio");
 		System.out.println(veicolo);
-		System.out.println(veicolo.possibiliCentriAbitati());
+		System.out.println(veicolo.possibileCentriAbitati());
 		
 		Terrestre veicolo2=new Terrestre();
 		veicolo2.setNome("autocarro di Luigi");
 		veicolo2.setCarburante("benzina");
-		veicolo2.setVelocità(130);
+		veicolo2.setVelocita(130);
 		System.out.println(veicolo2);
 		System.out.println(veicolo2.tempoDiPercorrenza(3090));
 		
