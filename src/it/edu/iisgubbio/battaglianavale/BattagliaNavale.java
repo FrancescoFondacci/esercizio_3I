@@ -51,7 +51,13 @@ public class BattagliaNavale extends Application {
 					default:
 						nomeNave=" ";
 				}
-				flotta[i]=new Nave(""+nomeNave+i,(int)(Math.random()*(10-misure[i])),(int)(Math.random()*10),misure[i],false);
+
+				if(Math.random()<0.5) {
+					flotta[i]=new Nave(""+nomeNave+i,(int)(Math.random()*(10-misure[i])),(int)(Math.random()*10),misure[i],true);
+				}else {
+					flotta[i]=new Nave(""+nomeNave+i,(int)(Math.random()*(10)),(int)(Math.random()*(10-misure[i])),misure[i],false);
+				}
+				
 				
 				sovrapposte=false;
 				for(int p=0;p<i;p++) {

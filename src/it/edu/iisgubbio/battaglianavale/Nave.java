@@ -17,17 +17,21 @@ public class Nave {
 		this.nome=nome;
 		pezzi=new Pezzo[lunghezza];
 		for(int i=0;i<lunghezza;i++) {
-			//FIXME ho ignorato la direzione
-			//if(Math.random()>0.5){
+			if (direzione) {
 				pezzi[i]=new Pezzo(x++,y);
-			//}else {
-				//pezzi[i]=new Pezzo(x,y++);
-			//}
+			}else {
+				pezzi[i]=new Pezzo(x,y++);
+			}
+			
 			
 			
 		}
 	}
-	
+	/**
+	 * serve a capire se la nave è affondata
+	 * @return true se affondata
+	 *         false se "no"
+	 */
 	public boolean affondata() {
 		int pezziColpiti=0;
 		boolean aff=false;
@@ -41,7 +45,13 @@ public class Nave {
 		}
 		return aff;
 	}
-	
+	/**
+	 * 
+	 * @param x cordinata delle ascisse
+	 * @param y cordinata delle ordinate
+	 * @return true se colpisce
+	 *         false se manca
+	 */
 	public boolean colpo(int x,int y) {
 		boolean preso=false;
 		for(int i=0;i<pezzi.length;i++) {
@@ -51,11 +61,17 @@ public class Nave {
 		}
 		return preso;
 	}
-	
+	/**
+	 * controlla se due navi sono sovrapposte
+	 * @param altra Nave da controllare se sovrappone con questo
+	 * @return true se si sovrappongono 
+	 *         false se non si sovrappongono
+	 */
 	public boolean sovrappone(Nave altra) {
 		boolean sovrappone=false;
 		for(int i=0;i<pezzi.length;i++) {
 			for(int iAltra=0;iAltra<altra.pezzi.length;iAltra++) {
+				//TODO bisognerebbe la sciare uno spazio tra una nave e l'altra
 				if(this.pezzi[i].x==altra.pezzi[iAltra].x && this.pezzi[i].y==altra.pezzi[iAltra].y) {
 					sovrappone=true;
 				}
@@ -74,10 +90,16 @@ public class Nave {
 		return risposta;
 	}
 
+	/**
+	 * @return nome della nave
+	 */
 	public String getNome() {
 		return nome;
 	}
 
+	/** 
+	 * @return vettore dei pezzi che compongono la nave
+	 */
 	public Pezzo[] getPezzi() {
 		return pezzi;
 	}
