@@ -34,6 +34,7 @@ public class BattagliaNavale extends Application {
 		
 		q=new ImageView[10][10];
 	
+		// costruzione della flotta di navi
 		for(int i=0;i<flotta.length;i++) {
 			String nomeNave=" ";
 			boolean sovrapposte;
@@ -53,12 +54,18 @@ public class BattagliaNavale extends Application {
 				}
 
 				if(Math.random()<0.5) {
-					flotta[i]=new Nave(""+nomeNave+i,(int)(Math.random()*(10-misure[i])),(int)(Math.random()*10),misure[i],true);
+					flotta[i]=new Nave(""+nomeNave+i,
+							(int)(Math.random()*(10-misure[i])),
+							(int)(Math.random()*10),misure[i],
+							true);
 				}else {
-					flotta[i]=new Nave(""+nomeNave+i,(int)(Math.random()*(10)),(int)(Math.random()*(10-misure[i])),misure[i],false);
+					flotta[i]=new Nave(""+nomeNave+i,
+							(int)(Math.random()*(10)),
+							(int)(Math.random()*(10-misure[i])),
+							misure[i],
+							false);
 				}
-				
-				
+				// controlla se la nuova nave si sovrappone su quelle presenti
 				sovrapposte=false;
 				for(int p=0;p<i;p++) {
 					if(flotta[i].sovrappone(flotta[p])){
@@ -98,7 +105,7 @@ public class BattagliaNavale extends Application {
 	}private void azioneColpo() {
 		boolean bColpito=false;
 		boolean affondata=false;
-		Pezzo[]k = null;
+		Pezzo[]pezzi = null;
 		int x=Integer.parseInt(tfCordinataX.getText());
 		int y=Integer.parseInt(tfCordinataY.getText());
 		for(int i=0;i<flotta.length;i++) {
@@ -106,9 +113,9 @@ public class BattagliaNavale extends Application {
 				bColpito=true;
 				if(flotta[i].affondata()) {
 					affondata=true;
-					k = flotta[i].getPezzi();
-					for(int pos=0;pos<k.length;pos++) {
-						q[k[pos].x][k[pos].y].setImage(affondato);
+					pezzi = flotta[i].getPezzi();
+					for(int pos=0;pos<pezzi.length;pos++) {
+						q[pezzi[pos].x][pezzi[pos].y].setImage(affondato);
 					}
 				}
 			}
