@@ -44,12 +44,14 @@ public class Copia extends Application {
 		FileReader flussoCaratteri = null;
 		String nomeFile=tfNome.getText();
 		try {
+			//lettura file
 			flussoCaratteri = new FileReader("c:\\Users\\francescofondacci\\Desktop\\"+nomeFile);
 			char caratteri[] = new char[1000];
 			int caratteriLetti = flussoCaratteri.read(caratteri);
 			String testo = new String(caratteri,0,caratteriLetti);
 			lEsito.setText(testo);
 			flussoCaratteri.close();
+			//scrittura file
 			FileWriter ScritturaCaratteri = new FileWriter("c:\\Users\\francescofondacci\\Desktop\\"+tfNuovo.getText());	
 			ScritturaCaratteri.write(testo);
 			ScritturaCaratteri.close();
